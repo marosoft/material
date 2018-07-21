@@ -906,7 +906,7 @@ MdChipsCtrl.prototype.shouldAddOnBlur = function() {
  * @returns {boolean} true if the input or a chip is focused. False otherwise.
  */
 MdChipsCtrl.prototype.hasFocus = function () {
-  return this.inputHasFocus || this.selectedChip >= 0;
+  return this.inputHasFocus || (!this.readonly && this.selectedChip >= 0);
 };
 
 /**
